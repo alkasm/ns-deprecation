@@ -76,4 +76,4 @@ Yes, they do! However, this does not work if you programmatically import via `im
 
 #### pkgutil-style namespace packages
 
-This might provide another solution as well, but I haven't looked into it. Not sure how/if it would affect metal et. al.
+This might provide another solution as well, but I haven't looked into it. Not sure how/if it would affect existing subpackages and so on.
