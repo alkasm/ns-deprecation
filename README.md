@@ -2,7 +2,7 @@
 
 This is a trial to figure out how to insert a subpackage into a namespace package, with backwards compatibility and deprecation warnings.
 
-### Have
+### current/
 
 Here we have a namespace package `nstest` with subpackages `pkg_a` and `pkg_b`:
 
@@ -13,7 +13,7 @@ Here we have a namespace package `nstest` with subpackages `pkg_a` and `pkg_b`:
 a b
 ```
 
-### Want
+### future/
 
 ```python
 >>> from nstest.pkgs.pkg_a.a import a
@@ -22,7 +22,7 @@ a b
 a b
 ```
 
-### Soft deprecation, with backcompat
+### midway/
 
 ```python
 >>> from nstest.pkg_a.a import a
@@ -33,9 +33,7 @@ a b
 a b
 ```
 
-### Hard deprecation, with help text
-
-Keep the old package name around, but only to throw a useful error.
+After awhile, we can turn on hard deprecation and keep the old package name around, but only to throw a useful error:
 
 ```python
 >>> from nstest.pkg_a.a import a
